@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 int main(){
-    int i, j, m[5][5], minimax_col = 0, minimax, maior, maior_col, maior_lin;
+    int i, j, m[5][5], minimax_col, minimax, maior, maior_lin;
     
     
     for(i=0; i<5; i++){
@@ -19,7 +19,6 @@ int main(){
 
     
     maior_lin = 0;
-    maior_col = 0;
     maior = m[0][0];
 
 
@@ -27,13 +26,13 @@ int main(){
         for(j=0; j<5; j++){
             if(m[i][j] > maior){
                 maior_lin = i;
-                maior_col = j;
                 maior = m[i][j];
             }
         }
     }
     
     minimax = m[maior_lin][0];
+    minimax_col = 0;
     
     for(j = 0; j < 5; j++){
         if(m[maior_lin][j] < minimax){
