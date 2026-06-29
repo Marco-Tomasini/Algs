@@ -1,0 +1,2 @@
+Brazil;4;Argentina;0
+Angola;1;Cabo Verde;3
